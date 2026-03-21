@@ -9,7 +9,7 @@
 </div>
 
 ## Q&A
-### Q. Why are using os.system, which is deprecated?
+### Q. Why are you using os.system, which is deprecated?
 A. Mobile users do not have accses to subproccess.run()
 
 
