@@ -8,3 +8,10 @@
 
 </div>
 
+
+## Required Python Packages
+- os (bundled with python)
+- termcolor
+
+
+SnakeSort is written and tested on Python 3.14. Feel free to test on other versions and do a PR to add here if they work!
