@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <a href="">![version: alpha1](https://img.shields.io/badge/versin-alpha1-red)</a>
+  <a href="">![version: alpha1](https://img.shields.io/badge/version-alpha1-red)</a>
 
 </div>
 
