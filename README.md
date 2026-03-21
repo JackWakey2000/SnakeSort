@@ -1,3 +1,2 @@
-<h1 align="center">SnakeSort</h1>
-<p align="center">Organise your files with the power of Python.</p>
----
+<h1 align="center">SnakeSort - Organise your files with the power of Python.</h1>
+<img alt="version: alpha1" src="https://img.shields.io/badge/version-alpha1-red" align="center"></img>
