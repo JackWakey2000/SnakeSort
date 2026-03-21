@@ -1,0 +1,1 @@
+# SnakeSort - Organise your files with the power of Python.
