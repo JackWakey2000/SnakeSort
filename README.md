@@ -1,4 +1,8 @@
 # <p align="center">SnakeSort - A simple Python file organizer.</p>
+
 <div align="center">
-    <img href=https://img.shields.io/badge/version-alpha1-red.svg alt="version: alpha1">
+
+  <a href="">![version: alpha1](https://img.shields.io/badge/versin-alpha1-red)</a>
+
 </div>
+
