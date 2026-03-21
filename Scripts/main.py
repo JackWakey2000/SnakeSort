@@ -3,11 +3,18 @@ from os import *
 from os.path import *
 from termcolor import *
 
+# set "clear" var
+if name == "nt":
+    clear = "cls"
+else:
+    clear = "clear"
+
 # Welcome
+system(clear)
 cprint("Welcome to SnakeSort!", attrs=["bold", "underline"])
 
 # Getting pathToSort
-pathToSort = input("What is the path of the directory you want to sort?")
+pathToSort = input("What is the path of the directory you want to sort? ")
 if pathToSort[-1] != "/":
     pathToSort + "/"
 
@@ -19,8 +26,13 @@ filesArr = []
 dirArr = []
 
 # Check if files are file/dir
-for i in pathArr:
+for i in range(len(pathArr)):
     if isfile(pathToSort + pathArr[i]):
         filesArr.append(pathArr[i])
     else:
         dirArr.append(pathArr[i])
+
+# Print the two arrs
+system(clear)
+print(f"Files: {filesArr}")
+print(f"Dirs: {dirArr}")

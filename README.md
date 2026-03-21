@@ -8,11 +8,16 @@
 
 </div>
 
+## Q&A
+### Q. Why are using os.system, which is deprecated?
+A. Mobile users do not have accses to subproccess.run()
+
 
 ## Required Python Packages
 - os (bundled with python)
 - os.path (bundled with python)
 - termcolor
+
 
 
 SnakeSort is written and tested on Python 3.14. Feel free to test on other versions and do a PR to add here if they work!
