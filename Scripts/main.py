@@ -15,8 +15,8 @@ cprint("Welcome to SnakeSort!", attrs=["bold", "underline"])
 
 # Getting pathToSort
 pathToSort = input("What is the path of the directory you want to sort? ")
-if pathToSort[-1] != "/":
-    pathToSort + "/"
+if pathToSort[-1] != "/" and pathToSort[-1] != "\\":
+    pathToSort += "/"
 
 # List files/dirs in pathToSort
 pathArr = listdir(pathToSort)
@@ -34,5 +34,6 @@ for i in range(len(pathArr)):
 
 # Print the two arrs
 system(clear)
-print(f"Files: {filesArr}")
-print(f"Dirs: {dirArr}")
+print(f"Directory sorted: {pathToSort}\n")
+print(f"Files: {filesArr}\n")
+print(f"Dirs: {dirArr}\n")
