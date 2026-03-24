@@ -15,13 +15,6 @@ A. Mobile users do not have accses to subproccess.run()
 ### Q. Help! Im getting a FileExistsError 
 A. Make sure your none of your folders are named "Directories"
 
-## Required Python Packages
-- os (bundled with python)
-- os.path (bundled with python)
-- shutil (bundled with python)
-- termcolor
-
-
 ## Disclaimer
 - Snakesort may break symlinks.
 - Snakesort is tested on windows. Might have limited functionality on linux.
