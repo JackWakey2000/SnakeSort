@@ -1,7 +1,6 @@
 # Imports
 from os import *
 from os.path import *
-from termcolor import *
 from shutil import *
 
 # Set "clear" var
@@ -12,7 +11,7 @@ else:
 
 # Welcome
 system(clear)
-cprint("Welcome to SnakeSort!", attrs=["bold", "underline"])
+print("Welcome to SnakeSort!\n")
 
 # Getting pathToSort & Confirming
 pathToSort = input("What is the path of the directory you want to sort? ")
