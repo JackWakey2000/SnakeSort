@@ -4,6 +4,11 @@ from os.path import *
 from shutil import *
 from tkinter import *
 from tkinter import ttk
+from tkinter.font import *
+import pyglet
+
+# Get Consolas Font
+pyglet.font.add_file("consolas.ttf")
 
 # Define Sort()
 def Sort():
@@ -115,16 +120,29 @@ def Sort():
 
 # Window Setup
 root = Tk()
-root.title = "SnakeSort"
+root.title("SnakeSort")
+root.geometry("500x200")
 
-# Button Frame
-buttonframe = ttk.Frame(root, padding=(5, 5, 45, 5), width=100, height=100)
+# Title
+title = ttk.Label(root, text="Welcome to SnakeSort GUI!")
+title.place(relx=0.5, rely=0, anchor=N)
+
+# Title Font
+titleFont = Font(title, family="consolas", size=15)
+titleFont.configure(underline = True, weight = BOLD)
+title.config(font=(titleFont))
+
+# Main Font
+mainFont = Font(family="consolas", size=7)
 
 # Setting pathToSort & Creating "Sort" Button
 pathToSort = StringVar()
-pathToSort_entry = ttk.Entry(buttonframe, width=40, textvariable=pathToSort).grid(row=1, sticky=W, padx=5, pady=5)
-ttk.Button(root, text="Sort", command=Sort).grid(row=1, padx=5, pady=5, sticky=SE)
+pathToSortEntry = ttk.Entry(root, width=30, textvariable=pathToSort)
+pathToSortEntry.place(relx=0.05, rely=0.7, anchor=W)
+pathToSortEntry.insert(END, "default")        
+button = ttk.Button(root, text="Sort", command=Sort)
+button.place(relx=0.95, rely=0.7, anchor=E)
 
 # Main Loop & Extra
-root.resizable(True, True)
+root.resizable(False, False)
 root.mainloop()

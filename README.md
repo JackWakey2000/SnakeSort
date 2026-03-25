@@ -16,6 +16,7 @@ A. Mobile users do not have accses to subproccess.run()
 A. Make sure your none of your folders are named "Directories"
 
 ## Disclaimer
+- SnakeSort needs the package "pyglet" if using the gui version
 - Snakesort may break symlinks.
 - Snakesort is tested on windows. Might have limited functionality on linux.
 - SnakeSort is written and tested on Python 3.14. Feel free to test on other versions and do a PR to add here if they work!
