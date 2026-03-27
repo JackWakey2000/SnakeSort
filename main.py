@@ -14,12 +14,16 @@ pyglet.font.add_file("consolas.ttf")
 def Sort():
 
     # Getting pathToSort
-    global pathToSort
-    pathToSort = pathToSort.get()
+    global pathToSortVar
+    pathToSort = pathToSortVar.get()
 
     # Join the paths
     if pathToSort[-1] != "/" and pathToSort[-1] != "\\":
         pathToSort += "/"
+
+    # Check if directory
+    if not isdir(pathToSort):
+        return 0
 
     # Get files in folder
     pathArr = listdir(pathToSort)
@@ -117,11 +121,24 @@ def Sort():
                 move(f"{pathToSort}/{checkNow}", f"{pathToSort}/Other (Unknown extention)")
             except FileExistsError:
                 move(f"{pathToSort}/{checkNow}", f"{pathToSort}/Other (Unknown extention)")
+    return 1
+
+# Define onClick()
+def onClick():
+    sort = Sort()
+    if sort == 0:
+        errortext.set("Error - Check if path is valid, a directory and doesnt\n include a folder named \"Directories\", then try agian")
+    else:
+        errortext.set("")
+        if odchkboxvar.get() == True:
+            startfile(pathToSortVar.get())
+        if cgchkboxvar.get() == True:
+            raise SystemExit
 
 # Window Setup
 root = Tk()
 root.title("SnakeSort")
-root.geometry("500x200")
+root.geometry("500x250")
 
 # Title
 title = ttk.Label(root, text="Welcome to SnakeSort GUI!")
@@ -132,16 +149,38 @@ titleFont = Font(title, family="consolas", size=15)
 titleFont.configure(underline = True, weight = BOLD)
 title.config(font=(titleFont))
 
-# Main Font
-mainFont = Font(family="consolas", size=7)
+# Main Font & Style
+mainFont = Font(family="consolas", size=9)
+mainStyle = ttk.Style()
+mainStyle.configure("Custom.TButton", font=(mainFont))
+
+# Instructions Label
+instructions = ttk.Label(root, font=mainFont, text="    Please enter your directory to sort below\n        and click sort when you are ready.")
+instructions.place(rely=0.3, relx=0.45, anchor="center")
+
+# Open Folder Checkbox
+odchkboxvar = BooleanVar(value=True)
+opendirchkbx = ttk.Checkbutton(root, text="Open folder after sort?", onvalue=True, offvalue=False, variable=odchkboxvar)
+opendirchkbx.place(rely=0.45, relx=0.5, anchor="center")
+
+# Close Gui Checkbox
+cgchkboxvar = BooleanVar(value=True)
+opendirchkbx = ttk.Checkbutton(root, text="Close GUI after sort?", onvalue=True, offvalue=False, variable=cgchkboxvar)
+opendirchkbx.place(rely=0.55, relx=0.5, anchor="center")
 
 # Setting pathToSort & Creating "Sort" Button
-pathToSort = StringVar()
-pathToSortEntry = ttk.Entry(root, width=30, textvariable=pathToSort)
+pathToSortVar = StringVar()
+pathToSortEntry = ttk.Entry(root, width=30, textvariable=pathToSortVar, font=mainFont)
 pathToSortEntry.place(relx=0.05, rely=0.7, anchor=W)
 pathToSortEntry.insert(END, "default")        
-button = ttk.Button(root, text="Sort", command=Sort)
+button = ttk.Button(root, text="Sort", command=onClick, style="Custom.TButton")
 button.place(relx=0.95, rely=0.7, anchor=E)
+
+# Status Label
+errortext = StringVar(value="")
+errorlabel = ttk.Label(root, textvariable=errortext, font=mainFont)
+errorlabel.place(rely=0.875, relx=0.5, anchor="center")
+errorlabel.config(font=("consolas", 6), foreground="red")
 
 # Main Loop & Extra
 root.resizable(False, False)
