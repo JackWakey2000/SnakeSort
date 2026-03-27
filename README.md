@@ -15,6 +15,9 @@ A. Mobile users do not have accses to subproccess.run()
 ### Q. Help! Im getting a FileExistsError 
 A. Make sure your none of your folders are named "Directories"
 
+### Q. The GUI version is not working.
+A. Make sure you have tk installed.
+
 ## Disclaimer
 - Snakesort may break symlinks.
 - Snakesort is tested on windows. Might have limited functionality on linux.
