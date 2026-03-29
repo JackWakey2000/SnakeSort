@@ -2,9 +2,9 @@
 
 <div align="center">
 
-  <a href="">![version: unfinished](https://img.shields.io/badge/main_version-1.0-red)</a>
-  <a href="">![version: unfinished](https://img.shields.io/badge/gui_version-1.1-lime)</a>
-  <a href="">![python version: 3.14.0](https://img.shields.io/badge/python_version-3.14_--_3.16-%233776AB?logo=python&logoColor=%23FFFFFF
+  <a href="https://github.com/JackWakey2000/SnakeSort/releases/tag/main_v1.0">![main version: 1.0](https://img.shields.io/badge/main_version-1.0-red)</a>
+  <a href="https://github.com/JackWakey2000/SnakeSort/releases/tag/gui_v1.1">![gui version: 1.1](https://img.shields.io/badge/gui_version-1.1-lime)</a>
+  <a href="https://www.python.org/downloads/">![python version: 3.14 - 3.16](https://img.shields.io/badge/python_version-3.14_--_3.16-%233776AB?logo=python&logoColor=%23FFFFFF
   )</a>
 
 </div>
