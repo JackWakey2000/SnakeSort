@@ -21,5 +21,5 @@ A. Make sure you have tk installed.
 
 ## Disclaimer
 - Snakesort may break symlinks.
-- Snakesort is tested on windows. Might have limited functionality on linux.
+- Snakesort is tested on windows. Might have limited functionality on linux and MacOS.
 - SnakeSort is written and tested on Python 3.14. Feel free to test on other versions and do a PR to add here if they work!
