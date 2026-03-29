@@ -5,10 +5,6 @@ from shutil import *
 from tkinter import *
 from tkinter import ttk
 from tkinter.font import *
-import pyglet
-
-# Get Consolas Font
-pyglet.font.add_file("consolas.ttf")
 
 # Define Sort()
 def Sort():
@@ -138,7 +134,7 @@ def onClick():
 # Window Setup
 root = Tk()
 root.title("SnakeSort")
-root.geometry("500x250")
+root.geometry("350x200")
 
 # Title
 title = ttk.Label(root, text="Welcome to SnakeSort GUI!")
@@ -180,7 +176,7 @@ button.place(relx=0.95, rely=0.7, anchor=E)
 errortext = StringVar(value="")
 errorlabel = ttk.Label(root, textvariable=errortext, font=mainFont)
 errorlabel.place(rely=0.875, relx=0.5, anchor="center")
-errorlabel.config(font=("consolas", 6), foreground="red")
+errorlabel.config(font=("consolas", 8), foreground="red")
 
 # Main Loop & Extra
 root.resizable(False, False)
