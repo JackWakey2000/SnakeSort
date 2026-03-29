@@ -3,6 +3,7 @@
 <div align="center">
 
   <a href="">![version: unfinished](https://img.shields.io/badge/version-1.0-red)</a>
+  <a href="">![version: unfinished](https://img.shields.io/badge/gui_version-1.1-lime)</a>
   <a href="">![python version: 3.14.0](https://img.shields.io/badge/python_version-3.14.0-%233776AB?logo=python&logoColor=%23FFFFFF
   )</a>
 
