@@ -1,4 +1,4 @@
-# <p align="center">SnakeSort - A simple Python file organizer.</p>
+# <p align="center">![logo](https://github.com/JackWakey2000/SnakeSort/blob/gui/logo.png) SnakeSort - A simple Python file organizer.</p>
 
 <div align="center">
 
